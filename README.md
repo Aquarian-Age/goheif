@@ -28,7 +28,7 @@ func main() {
 		log.Printf("Warning: no EXIF from %s: %v\n", fin, err)
 	}
 
-	img, err := goheif.DecodeImage(fi)
+	img, err := goheif.Decode(fi)
 	if err != nil {
 		log.Fatalf("Failed to parse %s: %v\n", fin, err)
 	}
@@ -39,7 +39,7 @@ func main() {
 	}
 	defer fo.Close()
 
-	w, _ := newWriterExif(fo, exif)
+	w, _ := NewWriterExif(fo, exif)
 	err = jpeg.Encode(w, img, nil)
 	if err != nil {
 		log.Fatalf("Failed to encode %s: %v\n", fout, err)
