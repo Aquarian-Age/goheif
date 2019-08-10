@@ -8,7 +8,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/jdeng/goheif/heif"
+	"github.com/Aquarian-Age/goheif/heif"
 	"github.com/jdeng/goheif/libde265"
 )
 
