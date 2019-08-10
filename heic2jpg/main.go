@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/jdeng/goheif"
+	"github.com/Aquarian-Age/goheif"
 	"image/jpeg"
 	"io"
 	"log"
